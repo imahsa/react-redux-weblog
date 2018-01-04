@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 //very sim to connect helper
-
+import { Link }  from 'react-router-dom';
 /** Redux Form is responsible for our forms STATE and VALIDATION
  *Field is used to represent a distict input that is going to be visible ro users
  *In Field, "name" specifies what piece of state this fiels is going to produce
@@ -63,6 +63,7 @@ class PostsNew extends Component {
             component={this.renderField}
           />
           <button type="submit" className="btn btn-primary">Submit</button>
+          <Link to="/" className="btn btn-danger">Cancel</Link>
         </form>
       </div>
     );
